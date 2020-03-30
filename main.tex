@@ -77,18 +77,18 @@ customizando as configurações de hierarquia de mémoria a partir da alteraçã
 \item Arquivo de Configuração de Arquitetura. \\
 A base da simulação, os arquivos formatados em xml são onde todas as configuração do processador e sua hierarquia de memoria. Nele customizamos a memoria cache, principal e virtual, line size, block size dentre outras configurações. È baseado nesses dados que o desempenho ao executar ações do trace variam de configuração para configuração.
 \\
-
-\item Traces. \\
 \begin{figure}[H]
   \includegraphics[width=\linewidth]{trace.jpg}
   \caption{Arquivo trace com várias instruções de leitura, escrita, busca de instrução e registro escape}
   \label{fig:trace}
 \end{figure}
+
+\item Traces. \\
+
 Os arquivos traces são  arquivos normalmente na extensão txt contendo as instruções de acesso que serão realizadas pela nossa arquitetura de memoria da simulação no prograama Amnesia. Neles as ações são divididas em 5 tipos de instruções. Onde as de rótulo 0 executam a leitura de dados, 1 gravação de dados, 2 busca de instrução, 3 registro escape(tratado como tipo de acesso desconhecido) e por ultímo a 4 que é registro escape(operação cache de flush)
-Apartir dos chamados traces criamos instruções para testar as capacidades dos processadores. Onde o 
-\
-\\
-\item Arquitetura em Arquivos XML. \\
+Apartir dos chamados traces criamos instruções para testar as capacidades dos processadores.\\
+
+\item Arquitetura em Arquivos XML. 
 
 \begin{figure}[H]
   \includegraphics[width=\linewidth]{arquitetura_de_memoria.jpg}
@@ -115,6 +115,11 @@ O Algoritmo de memória( First-in First-out) Page Replacement, ele trabalha mant
 
 \end{itemize}
 \\
+
+\section{Variações De Cache Size e Line Size Utilizadas}
+
+Para executarmos os testes utilizamos arquiteturas LRU e FIFO com memory size 128 e variamos seus cache size em 8,16,32 e de seus respectivos line size 2,4,8 e 16. 
+
 \section{Resultados dos Testes}
 
 \begin{figure}[H]
@@ -156,25 +161,26 @@ Ademais, foi comprovado (como esperado na teoria) que quanto maior for a memóri
 
 \section{Conclusão}
 
-Durante a realização deste trabalho, muito foi aprendido sobre a hierarquia de memória, tamanho da memória cache, tamanho do bloco, e o algoritmo de substituição e como essas configurações interferem na performance do microprocessador. 
+Durante a realização deste trabalho, muito foi aprendido sobre a hierarquia de memória, tamanho da memória cache, tamanho do bloco, e o algoritmo de substituição e como essas configurações interferem na performance do microprocessador. Concluimos que apesar de benéfico o  aumento do tamanho dos cache sizes e line size para aumentar o hit rate nas instruções tudo isso veem com o custo de aumentar o write time gastado por elas. Assim sendo, isso pode criar um custo que pode acabar sendo desnecessário para a execução de um programa que possui varias tarefas de leitura e escrita.
 
 \section{Referências Bibliográficas}
 
 \begin{thebibliography}{9}
 \bibitem{latexcompanion} 
-Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
-\textit{The \LaTeX\ Companion}. 
-Addison-Wesley, Reading, Massachusetts, 1993.
+Tiosso, F. Bruschi; Souza, PSL, Frank Mittelbach, and Alexander Samarin. 
+\textit{Amnesia: um Objeto de Aprendizagem para o Ensino de Hierarquia de Memória, Proceedings of the 25o. Simpósio Brasileiro de Informática na Educação, Dourados, Sociedade Brasileira de Computação, 2014. v. 1. p. 1-10.}. 
+Addison-Wesley, Simposio,  (SBIE 2014)
 
 \bibitem{einstein} 
-Albert Einstein. 
-\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German) 
-[\textit{On the electrodynamics of moving bodies}]. 
-Annalen der Physik, 322(10):891–921, 1905.
+Oliveira, B.H. ; Santos, J.H. ; SOUZA, P. S. L. ; Bruschi, S.M. ; Souza, S.R.S.
+\textit{(SBAC-PAD)}. 
+[\textit{ Amnésia: Um Simulador de Hierarquia de Memória. In: International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD) / Workshop sobre Educação em Arquitetura de Computadores (WEAC), Campo Grande. Proceedings of 20th SBAC-PAD. }]. 
+IEEE Computer Society, 2008. v. 1. p. 13-16.
 
-\bibitem{knuthwebsite} 
-Knuth: Computers and Typesetting,
-\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
+\textit{Moraes, M. P; SOUZA, P. S. L. ; Bruschi, S.M.}.
+\bibitem{a} 
+Usando Arquivos de Rastro no Projeto Amnesia. São Carlos: IX Simpósio Internacional de Iniciação Científica da Universidade de São Paulo (SIIC/USP), ICMC – USP 2011. (Resumo de Iniciação Científica).
+\\\texttt{http://amnesia.lasdpc.icmc.usp.br/publicacoes/}
 \end{thebibliography}
 
 
