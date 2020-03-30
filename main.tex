@@ -12,11 +12,7 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Trabalho 1 AC 3\\
-{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
-should not be used}
-\thanks{Identify applicable funding agency here. If none, delete this.}
-}
+\title{Trabalho 1 AC 3}
 
 \author{\IEEEauthorblockN{1\textsuperscript{st} Rafael Augusto Barros Ladeira de Oliveira}
 \IEEEauthorblockA{\textit{PUC Minas ICEI (Instituto de Ciências Exatas e Informática)} \\
@@ -71,51 +67,51 @@ Nas configurações foram utilizados diferentes tamanhos de linha de memória ca
 
 \begin{itemize}
 \item  
-Geral .//
-O  simuladora  nos  permite  gerar  diferentes  cenarios  de simulações   de  leitura  e  escrita  de  dados  customizando  as configurações de hierarquia de memoria apartir da alteração de diversas  configurações  da  memoria.  Exemplo  FIFO  ou  LRU e seu memory size, cache size e line size dentre outros. Al ́emdisso  podemos  testar  cenarios  diferentes  para  uma  mesma memoria e como  ela  se  comportaria para os variado cenarios  incluindo  no  programa pelos diferentes traces. Logo uma simulção nunca ́e a mesma
-\item Avoid combining SI and CGS units, such as current in amperes and magnetic field in oersteds. This often leads to confusion because equations do not balance dimensionally. If you must use mixed units, clearly state the units for each quantity that you use in an equation.
-\item Do not mix complete spellings and abbreviations of units: ``Wb/m\textsuperscript{2}'' or ``webers per square meter'', not ``webers/m\textsuperscript{2}''. Spell out units when they appear in text: ``. . . a few henries'', not ``. . . a few H''.
-\item Use a zero before decimal points: ``0.25'', not ``.25''. Use ``cm\textsuperscript{3}'', not ``cc''.)
+Geral . \\ \\
+O simulador nos permite gerar diferentes cenários de simulações de liteura e escrita de dados
+customizando as configurações de hierarquia de mémoria a partir da alteração de diversas configurações da memoria. Exemplo FIFO ou LRU e seu memory size, cache size e line size dentre outros. Além disso podemos testar diversos cenáriso diferentes para uma mesma memória e como ela se comportaria para os varios cenários criados para testar suas capacidades, quando incluimos os mesmos no programa apartir dos seus arquivos traces. Logo, uma simulação nunca tera os mesmos resultados.\\
+\\
+\item Traces. \\
+Os arquivos traces são  arquivos normalmente na extensão txt contendo as instruções de acesso que serão realizadas pela nossa arquitetura de memoria da simulação no prograama Amnesia. Neles as ações são divididas em 5 tipos de instruções. Onde as de rótulo 0 executam a leitura de dados, 1 gravação de dados, 2 busca de instrução, 3 registro escape(tratado como tipo de acesso desconhecido) e por ultímo a 4 que é registro escape(operação cache de flush)
+Apartir dos chamados traces criamos instruções para testar as capacidades dos processadores. Onde o 
+\
 \end{itemize}
 
 \section{Resultados dos Testes}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{Imagens/Tabela 1.png}
-    \caption{Comparação das taxas de acerto entre FIFO e LRU}
-    \label{fig:Comparação das taxas de acerto entre FIFO e LRU}
+    \includegraphics[width=\linewidth]{Imagens/Tabela.png}
+    \caption{Comparação das taxas de acerto entre FIFO e LRU.\\Na tabela de cima a memória virtual está desabilitada. Já na tabela de baixo a memória virtual está habilitada}
+    \label{fig:Comparação das taxas de acerto entre FIFO e LRU.\\Na tabela de cima a memória virtual está desabilitada. Já na tabela de baixo a memória virtual está habilitada}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{Imagens/Tabela 2.png}
-    \caption{Comparação do resultado aumento tamanho da cache}
-    \label{fig:my_label}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\linewidth]{Imagens/Hit RATE FIFO VS LRU.png}
+    \includegraphics[width=\linewidth]{Imagens/Hit_RATE_FIFO_VS_LRU.png}
     \caption{Taxa de acerto na memória cache em FIFO vs LRU}
     \label{fig:Taxa de acerto na memória cache em FIFO vs LRU}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{Imagens/WRITE TIME POR HIT RATE.png}
+    \includegraphics[width=\linewidth]{Imagens/WRITE_TIME_POR_HIT_RATE.png}
     \caption{Tempo de escrita por taxa de acerto na memória cache}
     \label{fig:Tempo de escrita por taxa de acerto na memória cache}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{Imagens/HIT RATE POR ARQUITETURA.png}
+    \includegraphics[width=\linewidth]{Imagens/HIT_RATE_POR_ARQUITETURA.png}
     \caption{Taxa de acerto por arquitetura}
     \label{fig:Taxa de acerto por arquitetura}
 \end{figure}
 
 Na comparação da taxa de acertos na memória cache não houve diferença significativa entre a política de substituição FIFO e LRU.
+
+\section{Conclusão}
+
+\section{Referências Bibliográficas}
 
 
 
