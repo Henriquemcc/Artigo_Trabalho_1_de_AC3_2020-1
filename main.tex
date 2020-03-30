@@ -61,8 +61,63 @@ Nos testes foram testado processadores com diferentes tamanhos de memória cache
 
 Nas configurações foram utilizados diferentes tamanhos de linha de memória cache. Os tamanhos variam entre 2, 4, 8 e 16 Bytes.
 
+\subsection{Funcionamento do Amnesia}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Amnesia_screen.png}
+  \caption{Tela do Programa Amnesia fazendo um teste}
+  \label{fig:boat1}
+\end{figure}
+
+\begin{itemize}
+\item  
+Geral .//
+O  simuladora  nos  permite  gerar  diferentes  cenarios  de simulações   de  leitura  e  escrita  de  dados  customizando  as configurações de hierarquia de memoria apartir da alteração de diversas  configurações  da  memoria.  Exemplo  FIFO  ou  LRU e seu memory size, cache size e line size dentre outros. Al ́emdisso  podemos  testar  cenarios  diferentes  para  uma  mesma memoria e como  ela  se  comportaria para os variado cenarios  incluindo  no  programa pelos diferentes traces. Logo uma simulção nunca ́e a mesma
+\item Avoid combining SI and CGS units, such as current in amperes and magnetic field in oersteds. This often leads to confusion because equations do not balance dimensionally. If you must use mixed units, clearly state the units for each quantity that you use in an equation.
+\item Do not mix complete spellings and abbreviations of units: ``Wb/m\textsuperscript{2}'' or ``webers per square meter'', not ``webers/m\textsuperscript{2}''. Spell out units when they appear in text: ``. . . a few henries'', not ``. . . a few H''.
+\item Use a zero before decimal points: ``0.25'', not ``.25''. Use ``cm\textsuperscript{3}'', not ``cc''.)
+\end{itemize}
 
 \section{Resultados dos Testes}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Imagens/Tabela 1.png}
+    \caption{Comparação das taxas de acerto entre FIFO e LRU}
+    \label{fig:Comparação das taxas de acerto entre FIFO e LRU}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Imagens/Tabela 2.png}
+    \caption{Comparação do resultado aumento tamanho da cache}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Imagens/Hit RATE FIFO VS LRU.png}
+    \caption{Taxa de acerto na memória cache em FIFO vs LRU}
+    \label{fig:Taxa de acerto na memória cache em FIFO vs LRU}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Imagens/WRITE TIME POR HIT RATE.png}
+    \caption{Tempo de escrita por taxa de acerto na memória cache}
+    \label{fig:Tempo de escrita por taxa de acerto na memória cache}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Imagens/HIT RATE POR ARQUITETURA.png}
+    \caption{Taxa de acerto por arquitetura}
+    \label{fig:Taxa de acerto por arquitetura}
+\end{figure}
+
+Na comparação da taxa de acertos na memória cache não houve diferença significativa entre a política de substituição FIFO e LRU.
+
+
 
 
 {\BibTeX} does not work by magic. It doesn't get the bibliographic
